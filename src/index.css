@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.burger {
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.burger.open div:nth-child(1) {
+    transform: rotate(45deg) translateY(10px);
+}
+
+.burger.open div:nth-child(2) {
+    opacity: 0;
+}
+
+.burger.open div:nth-child(3) {
+    transform: rotate(-45deg) translateY(-10px);
+}
+
+.menu {
+    transition: transform 0.3s ease;
+}
+
+.menu.translate-x-0 {
+    transform: translateX(0);
+}
+
+.menu.-translate-x-full {
+    transform: translateX(-100%);
+}
+
+.header {
+    width: 100%;
+    height: 100vh;
+    background-image: url(/header.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.header-filter {
+    height: 100%;
+    width: 100%;
+    background-image: -webkit-linear-gradient(top, rgba(9, 47, 51, 0.8), rgba(8, 29, 31, 0.7));
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
