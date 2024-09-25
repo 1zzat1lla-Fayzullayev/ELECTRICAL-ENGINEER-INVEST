@@ -28,10 +28,9 @@ function Navbar() {
                     <div className="flex items-center z-[999] relative justify-between mx-[20px] xl:mx-0">
                         <div className="hidden md:block">
                             <ul className="flex items-center gap-[25px]">
-                                <li><a href="#">About</a></li>
-                                <li><a href="#">Pricing</a></li>
-                                <li><a href="#">Features</a></li>
-                                <li><a href="#">Help</a></li>
+                                <li><a href="#">Главная</a></li>
+                                <li><a href="#">О нашей компании</a></li>
+                                <li><a href="#">Наши преимущества</a></li>
                             </ul>
                         </div>
                         <div>
@@ -39,10 +38,9 @@ function Navbar() {
                         </div>
                         <div className="hidden md:block">
                             <ul className="flex items-center gap-[25px]">
-                                <li><a href="#">Partners</a></li>
-                                <li><a href="#">Clients</a></li>
-                                <li><a href="#">Blog</a></li>
-                                <li><a href="#">Contacts</a></li>
+                                <li><a href="#">Услуги</a></li>
+                                <li><a href="#">Наши партнеры</a></li>
+                                <li><a href="#">Контакты</a></li>
                             </ul>
                         </div>
                         <div
@@ -60,14 +58,12 @@ function Navbar() {
 
             <div className={`menu duration-300 pt-[100px] h-full w-full bg-[#292929] fixed inset-0 z-40 px-5 flex flex-col items-center transform transition-transform ${isMenuOpen ? 'translate-x-0' : '-translate-x-full'}`}>
                 <div className="flex flex-col w-full text-center">
-                    <a href="#" className="font-medium block text-white rounded-xl p-4 mb-2 transition duration-300 hover:bg-gray-700 w-full">About</a>
-                    <a href="#" className="font-medium block text-white rounded-xl p-4 mb-2 transition duration-300 hover:bg-gray-700 w-full">Pricing</a>
-                    <a href="#" className="font-medium block text-white rounded-xl p-4 mb-2 transition duration-300 hover:bg-gray-700 w-full">Features</a>
-                    <a href="#" className="font-medium block text-white rounded-xl p-4 mb-2 transition duration-300 hover:bg-gray-700 w-full">Help</a>
-                    <a href="#" className="font-medium block text-white rounded-xl p-4 mb-2 transition duration-300 hover:bg-gray-700 w-full">Partners</a>
-                    <a href="#" className="font-medium block text-white rounded-xl p-4 mb-2 transition duration-300 hover:bg-gray-700 w-full">Clients</a>
-                    <a href="#" className="font-medium block text-white rounded-xl p-4 mb-2 transition duration-300 hover:bg-gray-700 w-full">Blog</a>
-                    <a href="#" className="font-medium block text-white rounded-xl p-4 mb-2 transition duration-300 hover:bg-gray-700 w-full">Contacts</a>
+                    <a href="#" className="font-medium block text-white rounded-xl p-4 mb-2 transition duration-300 hover:bg-gray-700 w-full">Главная</a>
+                    <a href="#" className="font-medium block text-white rounded-xl p-4 mb-2 transition duration-300 hover:bg-gray-700 w-full">О нашей компании</a>
+                    <a href="#" className="font-medium block text-white rounded-xl p-4 mb-2 transition duration-300 hover:bg-gray-700 w-full">Наши преимущества</a>
+                    <a href="#" className="font-medium block text-white rounded-xl p-4 mb-2 transition duration-300 hover:bg-gray-700 w-full">Услуги</a>
+                    <a href="#" className="font-medium block text-white rounded-xl p-4 mb-2 transition duration-300 hover:bg-gray-700 w-full">Наши партнеры</a>
+                    <a href="#" className="font-medium block text-white rounded-xl p-4 mb-2 transition duration-300 hover:bg-gray-700 w-full">Контакты</a>
                     <a href="#" target="_blank" className="w-full">
 
                     </a>

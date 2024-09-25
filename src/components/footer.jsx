@@ -7,7 +7,7 @@ function Footer() {
                 <div className="flex flex-col md:flex-row justify-between items-center mx-[20px] xl:mx-0">
                     <div className="flex flex-col justify-center items-center md:justify-start md:items-start mb-6 md:mb-0">
                         <img src="/logo.png" alt="" className='w-[70px] md:w-[130px]' />
-                        <p className="text-[18px] font-[300] mt-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <p className="text-[18px] font-[300] mt-5">ELECTRICAL ENGINEER INVEST</p>
                     </div>
 
                     <div className="flex flex-col md:flex-row gap-10 md:gap-20 mb-6 md:mb-0">

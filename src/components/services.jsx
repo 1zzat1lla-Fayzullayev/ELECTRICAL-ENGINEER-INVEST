@@ -8,7 +8,7 @@ function Services() {
                     <div className="flex justify-center items-center text-center flex-col">
                         <h2 className="text-[52px] font-[600]">Наши услуги</h2>
                         <p className="pt-[41px] text-[24px] leading-[1.5] font-[300] max-w-[800px]">
-                            Помогите клиенту принять решение, рассказав о своих сильных сторонах и причинах работать именно с вами.
+                            Мы предлагаем надежные, энергоэффективные и безопасные услуги для долгосрочной эксплуатации объектов.
                         </p>
                     </div>
 
@@ -48,9 +48,9 @@ function Services() {
                     </div>
 
                     <div className="flex justify-center items-center pt-[100px] gap-[20px] flex-col md:flex-row md:gap-[60px] text-center md:text-start">
-                        <h4 className="text-[16px] sm:text-[18px] md:text-[22px] leading-[1.55] font-[300] max-w-[550px]">Помогите клиенту принять решение. Добавьте фразу и кнопку целевого действия.</h4>
+                        <h4 className="text-[16px] sm:text-[18px] md:text-[22px] leading-[1.55] font-[300] max-w-[550px]">Оставьте заявку на бесплатную консультацию. Наши специалисты с вами свяжутся.</h4>
                         <button className="bg-[#259da8] text-white rounded-[5px] px-[40px] h-[60px]">
-                            Целевое действие
+                            Оставить заявку
                         </button>
                     </div>
                 </div>
