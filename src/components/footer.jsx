@@ -1,6 +1,12 @@
+/* eslint-disable no-unused-vars */
+import { useContext } from 'react';
+import { LanguageContext } from '../context/LanguageContext';
 import Wrapper from '../layout/wrapper';
+import { getText } from '../locale';
 
 function Footer() {
+    const { selectedLanguage, selectedFlag, changeLanguage } =
+    useContext(LanguageContext);
     return (
         <footer className="bg-[#292929] text-white py-10 text-center md:text-start">
             <Wrapper>
@@ -12,24 +18,26 @@ function Footer() {
 
                     <div className="flex flex-col md:flex-row gap-10 md:gap-20 mb-6 md:mb-0">
                         <div>
-                            <h3 className="text-lg font-semibold mb-2">Company</h3>
+                            {/* <h3 className="text-lg font-semibold mb-2">Company</h3> */}
                             <ul className="flex flex-col gap-2">
-                                <li><a href="#" className="hover:text-gray-400 transition">About Us</a></li>
-                                <li><a href="#" className="hover:text-gray-400 transition">Services</a></li>
+                                <li><a href="#" className="hover:text-gray-400 transition">{getText("navbarTitle1")}</a></li>
+                                <li><a href="#" className="hover:text-gray-400 transition">{getText("navbarTitle2")}</a></li>
+                                <li><a href="#" className="hover:text-gray-400 transition">{getText("navbarTitle3")}</a></li>
                             </ul>
                         </div>
                         <div>
-                            <h3 className="text-lg font-semibold mb-2">Resources</h3>
+                            {/* <h3 className="text-lg font-semibold mb-2">Resources</h3> */}
                             <ul className="flex flex-col gap-2">
-                                <li><a href="#" className="hover:text-gray-400 transition">Blog</a></li>
-                                <li><a href="#" className="hover:text-gray-400 transition">Contact</a></li>
+                                <li><a href="#" className="hover:text-gray-400 transition">{getText("navbarTitle4")}</a></li>
+                                <li><a href="#" className="hover:text-gray-400 transition">{getText("navbarTitle5")}</a></li>
+                                <li><a href="#" className="hover:text-gray-400 transition">{getText("navbarTitle6")}</a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
 
                 <div className="mt-10 border-t border-gray-700 pt-6 text-center text-sm">
-                    <p>&copy; {new Date().getFullYear()} ELECTRICAL ENGINEER INVEST. All rights reserved.</p>
+                    <p>&copy; {new Date().getFullYear()} ELECTRICAL ENGINEER INVEST. {getText("footerDateText")}</p>
                 </div>
             </Wrapper>
         </footer>

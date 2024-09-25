@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React from "react";
+import React, { useContext } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
@@ -9,11 +9,15 @@ import "swiper/css/pagination";
 
 // Import required modules
 import { Autoplay, FreeMode, Pagination } from "swiper/modules";
+import { getText } from "../locale";
+import { LanguageContext } from "../context/LanguageContext";
 
 const Partners = () => {
+    const { selectedLanguage, selectedFlag, changeLanguage } =
+    useContext(LanguageContext);
     return (
         <div className="my-[100px]">
-            <h2 className="text-[30px] md:text-[52px] font-[600] leading-[1.23] text-center py-[100px]">Партнеры</h2>
+            <h2 className="text-[30px] md:text-[52px] font-[600] leading-[1.23] text-center py-[100px]">{getText("partnersTitle")}</h2>
             <Swiper
                 spaceBetween={30}
                 freeMode={true}

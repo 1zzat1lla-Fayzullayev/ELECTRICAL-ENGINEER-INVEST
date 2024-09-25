@@ -1,11 +1,15 @@
 /* eslint-disable no-unused-vars */
-import { useState } from "react";
+import { useContext, useState } from "react";
 import Wrapper from "../layout/wrapper";
 import axios from "axios";
 import toast from "react-hot-toast";
 import '@fortawesome/fontawesome-free/css/all.min.css';
+import { getText } from "../locale";
+import { LanguageContext } from "../context/LanguageContext";
 
 function Contact() {
+    const { selectedLanguage, selectedFlag, changeLanguage } =
+    useContext(LanguageContext);
     const [name, setName] = useState("");
     const [phone, setPhone] = useState("");
     const [description, setDescription] = useState("");
@@ -49,20 +53,20 @@ function Contact() {
                 <Wrapper>
                     <div className="mx-[20px] xl:mx-0">
                         <div className="pb-[60px] flex flex-col items-center justify-center text-center">
-                            <h2 className="text-[30px] md:text-[52px] font-[600] leading-[1.23]">Свяжитесь с нами!</h2>
-                            <p className="text-[20px] md:text-[26px] leading-[1.45] font-[300] mt-[41px] max-w-[800px]">Оставьте заявку, наши специалисты свяжутся с вами в ближайшее время.</p>
+                            <h2 className="text-[30px] md:text-[52px] font-[600] leading-[1.23]">{getText("contactTitle")}</h2>
+                            <p className="text-[20px] md:text-[26px] leading-[1.45] font-[300] mt-[41px] max-w-[800px]">{getText("contactParagraph")}</p>
                         </div>
                         <div className="flex flex-col items-center justify-center w-full gap-[40px]">
-                            <input type="text" name="name" placeholder="Имя" className="w-full outline-none border-b border-b-[#8c8c8c] bg-transparent h-[60px]" value={name} onChange={(e) => setName(e.target.value)} />
-                            <input type="number" name="number" placeholder="Телефон" className="w-full outline-none border-b border-b-[#8c8c8c] bg-transparent h-[60px]" value={phone} onChange={(e) => setPhone(e.target.value)} />
-                            <textarea name="message" placeholder="Сообщение" className="w-full outline-none border-b border-b-[#8c8c8c] bg-transparent h-[102px] pt-[17px]" value={description} onChange={(e) => setDescription(e.target.value)}></textarea>
+                            <input type="text" name="name" placeholder={getText("contactInputName")} className="w-full outline-none border-b border-b-[#8c8c8c] bg-transparent h-[60px]" value={name} onChange={(e) => setName(e.target.value)} />
+                            <input type="number" name="number" placeholder={getText("contactInputPhone")} className="w-full outline-none border-b border-b-[#8c8c8c] bg-transparent h-[60px]" value={phone} onChange={(e) => setPhone(e.target.value)} />
+                            <textarea name="message" placeholder={getText("contactInputMessage")} className="w-full outline-none border-b border-b-[#8c8c8c] bg-transparent h-[102px] pt-[17px]" value={description} onChange={(e) => setDescription(e.target.value)}></textarea>
                             <button className="bg-[#259da8] text-white px-[60px] h-[60px] font-[600]" onClick={sendFeedback}>
-                                {isLoading ? <span>Отправка...</span> : <span>Отправить</span>}
+                                {isLoading ? <span>{getText("contactButtonLoadingText")}</span> : <span>{getText("contactButtonText")}</span>}
                             </button>
                         </div>
                         <div className="text-center pt-[130px]">
                             <h2 className="text-[30px] md:text-[42px] font-[600] leading-[1.23]">+998 90 012 74 00 <br />hello@mycompany.com</h2>
-                            <p className="text-[24px] font-[300] py-[45px]">100206 O’zbekiston Respublikasi, Toshkent sh., Yunusobod tumani, 17-kvartal, Yangishahar k., 11</p>
+                            <p className="text-[24px] font-[300] py-[45px]">{getText("contactLocationParagraph")}</p>
                             <div className="flex items-center justify-center gap-[10px]">
                                 <a href="#" className="cursor-pointer" target="_blank" rel="noopener noreferrer">
                                     <i className="fab fa-telegram fa-2x text-[#259da8]"></i>

@@ -1,9 +1,12 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import Wrapper from "../layout/wrapper"
+import { LanguageContext } from "../context/LanguageContext";
+import { getText } from "../locale";
 
 function Navbar() {
     const [isMenuOpen, setMenuOpen] = useState(false);
-
+    const { selectedLanguage, selectedFlag, changeLanguage } =
+        useContext(LanguageContext);
 
     useEffect(() => {
         if (isMenuOpen) {
@@ -28,9 +31,9 @@ function Navbar() {
                     <div className="flex items-center z-[999] relative justify-between mx-[20px] xl:mx-0">
                         <div className="hidden md:block">
                             <ul className="flex items-center gap-[25px]">
-                                <li><a href="#">Главная</a></li>
-                                <li><a href="#">О нашей компании</a></li>
-                                <li><a href="#">Наши преимущества</a></li>
+                                <li><a href="#">{getText("navbarTitle1")}</a></li>
+                                <li><a href="#">{getText("navbarTitle2")}</a></li>
+                                <li><a href="#">{getText("navbarTitle3")}</a></li>
                             </ul>
                         </div>
                         <div>
@@ -38,9 +41,23 @@ function Navbar() {
                         </div>
                         <div className="hidden md:block">
                             <ul className="flex items-center gap-[25px]">
-                                <li><a href="#">Услуги</a></li>
-                                <li><a href="#">Наши партнеры</a></li>
-                                <li><a href="#">Контакты</a></li>
+                                <li><a href="#">{getText("navbarTitle4")}</a></li>
+                                <li><a href="#">{getText("navbarTitle5")}</a></li>
+                                <li><a href="#">{getText("navbarTitle6")}</a></li>
+                                <div className="flex items-center gap-1 bg-transparent">
+                                    <img
+                                        src={selectedFlag}
+                                        style={{ width: "20px", objectFit: "cover" }}
+                                    />
+                                    <select
+                                        className="bg-transparent outline-none border-none "
+                                        onChange={(e) => changeLanguage(e.target.value)}
+                                        value={selectedLanguage}
+                                    >
+                                        <option value="uz" className="text-black ">Oʻzbek</option>
+                                        <option value="ru" className="text-black ">Rus</option>
+                                    </select>
+                                </div>
                             </ul>
                         </div>
                         <div
@@ -58,15 +75,27 @@ function Navbar() {
 
             <div className={`menu duration-300 pt-[100px] h-full w-full bg-[#292929] fixed inset-0 z-40 px-5 flex flex-col items-center transform transition-transform ${isMenuOpen ? 'translate-x-0' : '-translate-x-full'}`}>
                 <div className="flex flex-col w-full text-center">
-                    <a href="#" className="font-medium block text-white rounded-xl p-4 mb-2 transition duration-300 hover:bg-gray-700 w-full">Главная</a>
-                    <a href="#" className="font-medium block text-white rounded-xl p-4 mb-2 transition duration-300 hover:bg-gray-700 w-full">О нашей компании</a>
-                    <a href="#" className="font-medium block text-white rounded-xl p-4 mb-2 transition duration-300 hover:bg-gray-700 w-full">Наши преимущества</a>
-                    <a href="#" className="font-medium block text-white rounded-xl p-4 mb-2 transition duration-300 hover:bg-gray-700 w-full">Услуги</a>
-                    <a href="#" className="font-medium block text-white rounded-xl p-4 mb-2 transition duration-300 hover:bg-gray-700 w-full">Наши партнеры</a>
-                    <a href="#" className="font-medium block text-white rounded-xl p-4 mb-2 transition duration-300 hover:bg-gray-700 w-full">Контакты</a>
+                    <a href="#" className="font-medium block text-white rounded-xl p-4 mb-2 transition duration-300 hover:bg-gray-700 w-full">{getText("navbarTitle1")}</a>
+                    <a href="#" className="font-medium block text-white rounded-xl p-4 mb-2 transition duration-300 hover:bg-gray-700 w-full">{getText("navbarTitle2")}</a>
+                    <a href="#" className="font-medium block text-white rounded-xl p-4 mb-2 transition duration-300 hover:bg-gray-700 w-full">{getText("navbarTitle3")}</a>
+                    <a href="#" className="font-medium block text-white rounded-xl p-4 mb-2 transition duration-300 hover:bg-gray-700 w-full">{getText("navbarTitle4")}</a>
+                    <a href="#" className="font-medium block text-white rounded-xl p-4 mb-2 transition duration-300 hover:bg-gray-700 w-full">{getText("navbarTitle5")}</a>
+                    <a href="#" className="font-medium block text-white rounded-xl p-4 mb-2 transition duration-300 hover:bg-gray-700 w-full">{getText("navbarTitle6")}</a>
                     <a href="#" target="_blank" className="w-full">
-
                     </a>
+                    <div className="siteLang d-flex align-items-center">
+                        <img
+                            src={selectedFlag}
+                            style={{ width: "20px", objectFit: "cover" }}
+                        />
+                        <select
+                            onChange={(e) => changeLanguage(e.target.value)}
+                            value={selectedLanguage}
+                        >
+                            <option value="uz">Oʻzbek</option>
+                            <option value="ru">Rus</option>
+                        </select>
+                    </div>
                 </div>
             </div>
         </>
