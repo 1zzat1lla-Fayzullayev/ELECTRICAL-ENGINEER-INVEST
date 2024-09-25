@@ -83,17 +83,18 @@ function Navbar() {
                     <a href="#" className="font-medium block text-white rounded-xl p-4 mb-2 transition duration-300 hover:bg-gray-700 w-full">{getText("navbarTitle6")}</a>
                     <a href="#" target="_blank" className="w-full">
                     </a>
-                    <div className="siteLang d-flex align-items-center">
+                    <div className="flex items-center gap-1 bg-transparent justify-center text-white">
                         <img
                             src={selectedFlag}
                             style={{ width: "20px", objectFit: "cover" }}
                         />
                         <select
+                            className="bg-transparent outline-none border-none"
                             onChange={(e) => changeLanguage(e.target.value)}
                             value={selectedLanguage}
                         >
-                            <option value="uz">Oʻzbek</option>
-                            <option value="ru">Rus</option>
+                            <option value="uz" className="text-black">Oʻzbek</option>
+                            <option value="ru" className="text-black">Rus</option>
                         </select>
                     </div>
                 </div>
