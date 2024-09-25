@@ -41,105 +41,105 @@ const Partners = () => {
                 }}
                 className="mySwiper"
             >
-                <SwiperSlide>
+                <SwiperSlide className="flex items-center justify-center h-[150px]">
                     <img
                         className="w-[70px] md:w-[120px] h-full object-contain"
                         src="img/part1.png"
                         alt="Partner 1"
                     />
                 </SwiperSlide>
-                <SwiperSlide>
+                <SwiperSlide className="flex items-center justify-center h-[150px]">
                     <img
                         className="w-[70px] md:w-[120px] h-full object-contain"
                         src="img/part2.png"
                         alt="Partner 2"
                     />
                 </SwiperSlide>
-                <SwiperSlide>
+                <SwiperSlide className="flex items-center justify-center h-[150px]">
                     <img
                         className="w-[70px] md:w-[120px] h-full object-contain"
                         src="img/part3.png"
                         alt="Partner 3"
                     />
                 </SwiperSlide>
-                <SwiperSlide>
+                <SwiperSlide className="flex items-center justify-center h-[150px]">
                     <img
                         className="w-[70px] md:w-[120px] h-full object-contain"
                         src="img/part4.png"
                         alt="Partner 4"
                     />
                 </SwiperSlide>
-                <SwiperSlide>
+                <SwiperSlide className="flex items-center justify-center h-[150px]">
                     <img
                         className="w-[70px] md:w-[120px] h-full object-contain"
                         src="img/part5.png"
                         alt="Partner 5"
                     />
                 </SwiperSlide>
-                <SwiperSlide>
+                <SwiperSlide className="flex items-center justify-center h-[150px]">
                     <img
                         className="w-[70px] md:w-[120px] h-full object-contain"
                         src="img/part6.png"
                         alt="Partner 6"
                     />
                 </SwiperSlide>
-                <SwiperSlide>
+                <SwiperSlide className="flex items-center justify-center h-[150px]">
                     <img
                         className="w-[70px] md:w-[120px] h-full object-contain"
                         src="img/part7.png"
                         alt="Partner 7"
                     />
                 </SwiperSlide>
-                <SwiperSlide>
+                <SwiperSlide className="flex items-center justify-center h-[150px]">
                     <img
                         className="w-[70px] md:w-[120px] h-full object-contain"
                         src="img/part8.png"
                         alt="Partner 8"
                     />
                 </SwiperSlide>
-                <SwiperSlide>
+                <SwiperSlide className="flex items-center justify-center h-[150px]">
                     <img
                         className="w-[70px] md:w-[120px] h-full object-contain"
                         src="img/part9.png"
                         alt="Partner 9"
                     />
                 </SwiperSlide>
-                <SwiperSlide>
+                <SwiperSlide className="flex items-center justify-center h-[150px]">
                     <img
                         className="w-[70px] md:w-[120px] h-full object-contain"
                         src="img/part10.png"
                         alt="Partner 10"
                     />
                 </SwiperSlide>
-                <SwiperSlide>
+                <SwiperSlide className="flex items-center justify-center h-[150px]">
                     <img
                         className="w-[70px] md:w-[120px] h-full object-contain"
                         src="img/part12.png"
                         alt="Partner 12"
                     />
                 </SwiperSlide>
-                <SwiperSlide>
+                <SwiperSlide className="flex items-center justify-center h-[150px]">
                     <img
                         className="w-[70px] md:w-[120px] h-full object-contain"
                         src="img/part13.jpeg"
                         alt="Partner 13"
                     />
                 </SwiperSlide>
-                <SwiperSlide>
+                <SwiperSlide className="flex items-center justify-center h-[150px]">
                     <img
                         className="w-[70px] md:w-[120px] h-full object-contain"
                         src="img/part14.png"
                         alt="Partner 14"
                     />
                 </SwiperSlide>
-                <SwiperSlide>
+                <SwiperSlide className="flex items-center justify-center h-[150px]">
                     <img
                         className="w-[70px] md:w-[120px] h-full object-contain"
                         src="img/part15.png"
                         alt="Partner 15"
                     />
                 </SwiperSlide>
-                <SwiperSlide>
+                <SwiperSlide className="flex items-center justify-center h-[150px]">
                     <img
                         className="w-[70px] md:w-[120px] h-full object-contain"
                         src="img/part16.png"
