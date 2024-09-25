@@ -9,7 +9,7 @@ export const flagImages = {
 
 export const getLanguage = () => {
     const storedLanguage = localStorage.getItem(LANGUAGE);
-    return storedLanguage ? storedLanguage : "uz";
+    return storedLanguage ? storedLanguage : "ru";
 };
 
 export const getText = (word) => {
