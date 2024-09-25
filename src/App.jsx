@@ -6,6 +6,7 @@ import Header from "./components/header"
 import Navbar from "./components/navbar"
 import Services from "./components/services"
 import Why from "./components/why"
+import Partners from "./components/partners"
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Services />
       <Why />
       <Contact />
+      <Partners />
       <Footer />
       <Toaster
         position="top-center"
