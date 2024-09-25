@@ -30,7 +30,7 @@ function Services() {
                             </div>
                         </div>
 
-                        <div className="flex flex-col md:flex-row w-full ">
+                        <div className="flex flex-col-reverse md:flex-row w-full ">
                             <div className="bg-white w-full md:w-[50%] flex items-center">
                                 <p className="text-[16px] py-[70px] md:py-0 sm:text-[18px] md:text-[22px] max-w-[360px] flex justify-center items-center h-full mx-auto pt-[20px] px-[10px] text-center leading-[25px] opacity-[.7]">
                                     {getText("servicesCard2")}
